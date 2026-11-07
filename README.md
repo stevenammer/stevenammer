@@ -13,7 +13,7 @@ An open-source app for practicing interviews with AI feedback. The sample worksp
 Ten short essays that apply bottlenecks, queues, feedback loops and delays to a phone sales floor. All the examples are invented. CC BY 4.0.
 
 **[Before the Vibes](https://github.com/stevenammer/before-the-vibes)**
-The C programs I wrote in 2013 and 2014, published as they were, bugs and all, with an honest review of what they do and don't show. The finished word search is still missing.
+My individual C assignments and shared group projects from 2013 and 2014, bugs and all, with an honest review of what they do and don't show. The finished word search is still missing.
 
 ## How I work
 
