@@ -9,6 +9,9 @@ I'm learning in public, so some of this is rough on purpose.
 **[Interview Coach](https://github.com/stevenammer/interview-coach)**
 An open-source app for practicing interviews with AI feedback. The sample workspace is my own practice for a training role, drafts and gaps included. MIT licensed.
 
+**[EFFORT (public demo)](https://github.com/stevenammer/effort-demo)**
+[Try the interactive walkthrough](https://stevenammer.github.io/effort-demo/).
+
 **[Before the Vibes](https://github.com/stevenammer/before-the-vibes)**
 My individual C assignments and shared group projects from 2013 and 2014, bugs and all, with an honest review of what they do and don't show. The finished word search is still missing.
 
