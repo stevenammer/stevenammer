@@ -9,9 +9,6 @@ I'm learning in public, so some of this is rough on purpose.
 **[Interview Coach](https://github.com/stevenammer/interview-coach)**
 An open-source app for practicing interviews with AI feedback. The sample workspace is my own practice for a training role, drafts and gaps included. MIT licensed.
 
-**[Systems Thinking for Sales](https://github.com/stevenammer/systems-thinking-for-sales)**
-Ten short essays that apply bottlenecks, queues, feedback loops and delays to a phone sales floor. All the examples are invented. CC BY 4.0.
-
 **[Before the Vibes](https://github.com/stevenammer/before-the-vibes)**
 My individual C assignments and shared group projects from 2013 and 2014, bugs and all, with an honest review of what they do and don't show. The finished word search is still missing.
 
