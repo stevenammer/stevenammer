@@ -15,6 +15,9 @@ An open-source app for practicing interviews with AI feedback. The sample worksp
 **[Before the Vibes](https://github.com/stevenammer/before-the-vibes)**
 My individual C assignments and shared group projects from 2013 and 2014, bugs and all, with an honest review of what they do and don't show. The finished word search is still missing.
 
+**[If I Could, Would You?](https://www.linkedin.com/newsletters/if-i-could-would-you%3F-7521263683642056705/)**
+My newsletter. I find out what I can do with AI, then find out if I can teach it in a way that inspires other people to try.
+
 ## How I work
 
 - I don't write most of the code now. Agents do. My job is to say what done looks like, test it hard, and decide what's safe to ship.
