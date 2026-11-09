@@ -1,6 +1,6 @@
 # Steven Ammer
 
-15 years training phone sales teams. Now I build AI workflows people can check. I write the specs, I try to break what comes back, and I own the risk decisions. I've spent 15 years in consumer phone sales as an agent, supervisor and trainer, and I still work on the phones. I also wrote C in college.
+I spent 15 years in consumer phone sales as an agent, supervisor and trainer, and I still work the phones. Now I build AI workflows people can check. I write the specs, I try to break what comes back, and I decide what ships.
 
 I'm learning in public, so some of this is rough on purpose.
 
