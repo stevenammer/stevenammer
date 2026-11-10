@@ -19,6 +19,10 @@ const cards = [
   ['quick-deflections', 'Quick Deflections', 'Words to keep the call moving.', 'ORIGINAL SALES TRAINING', 'turn'],
   ['discovery', 'Discovery', 'A conversation with a purpose.', 'ORIGINAL SALES TRAINING', 'search'],
   ['listening', 'Listening to Your Guest', 'Leave room to hear the answer.', 'ORIGINAL SALES TRAINING', 'listen'],
+  ['getting-repeating-isolating', 'Getting, Repeating,\nand Isolating', 'Set up the box-in before the close.', 'ORIGINAL SALES TRAINING', 'isolate'],
+  ['closing', 'Closing', 'Confidence over technique.', 'ORIGINAL SALES TRAINING', 'close'],
+  ['goal-setting', 'Goal Setting', 'Work backwards from what you want.', 'ORIGINAL SALES TRAINING', 'goal'],
+  ['supervisor-handbook', 'Assistant Supervisor\nHandbook', 'A floor management playbook.', 'ORIGINAL FLOOR PLAYBOOK', 'book'],
 ];
 const shapes = {
   layers: '<rect x="4" y="4" width="170" height="110" rx="8"/><rect x="22" y="28" width="170" height="110" rx="8" fill="#161614"/><rect x="40" y="52" width="170" height="110" rx="8" fill="#0c0c0b"/><path d="M65 85h90M65 105h115M65 125h67"/>',
@@ -33,16 +37,27 @@ const shapes = {
   turn: '<path d="M15 45h75c29 0 48 17 48 43v29M118 98l20 20 20-20M26 150h164"/><circle cx="15" cy="45" r="6" fill="#a99ae8" stroke="none"/><circle cx="190" cy="150" r="6" fill="#9acb91" stroke="none"/>',
   search: '<circle cx="88" cy="73" r="53"/><path d="M126 112l58 58M60 61h56M60 80h43M60 99h26"/><circle cx="88" cy="73" r="65" stroke-dasharray="4 10"/>',
   listen: '<path d="M24 27h155v92H96l-31 29v-29H24zM49 59h104M49 80h70"/><path d="M190 43c15 20 15 43 0 63M205 29c23 28 23 63 0 91"/>',
+  isolate: '<rect x="6" y="8" width="203" height="150" rx="8" stroke-dasharray="6 9"/><rect x="42" y="35" width="131" height="96" rx="6"/><rect x="78" y="62" width="59" height="42" rx="4"/><circle cx="107" cy="83" r="5" fill="#9acb91" stroke="none"/>',
+  close: '<circle cx="107" cy="80" r="70"/><path d="M72 82l24 24 46-52"/><path d="M12 165h190"/>',
+  goal: '<path d="M170 20v130M170 24h-58l14 22-14 22h58"/><path d="M20 150h150" stroke-dasharray="6 9"/><path d="M48 132l-28 18 28 18"/><circle cx="170" cy="150" r="6" fill="#9acb91" stroke="none"/>',
+  book: '<path d="M107 30c-26-16-60-18-95-12v130c35-6 69-4 95 12 26-16 60-18 95-12V18c-35-6-69-4-95 12zM107 30v130"/><path d="M34 58h46M34 82h46M34 106h30M134 58h46M134 82h46M134 106h30"/>',
 };
 const esc = (s) => s.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 function svg([slug, title, subtitle, category, motif]) {
   // Long titles get a little more room while remaining dominant at thumbnail size.
-  const font = title.length > 20 ? 66 : title.length > 16 ? 72 : 82;
+  // A title with a line break is set on two lines, and the subtitle moves down to make room.
+  const lines = title.split('\n');
+  const longest = Math.max(...lines.map((line) => line.length));
+  const font = lines.length > 1 ? 66 : longest > 20 ? 66 : longest > 16 ? 72 : 82;
+  const firstY = lines.length > 1 ? 214 : 249;
+  const subtitleY = lines.length > 1 ? 346 : 309;
+  const titleSpans = lines.map((line, i) => `<tspan x="76" y="${firstY + i * 72}">${esc(line)}</tspan>`).join('');
+  const plainTitle = lines.join(' ');
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-<title id="title">${esc(title)}</title><desc id="desc">${esc(subtitle)} ${esc(category)}. Cover for Steven Ammer.</desc>
+<title id="title">${esc(plainTitle)}</title><desc id="desc">${esc(subtitle)} ${esc(category)}. Cover for Steven Ammer.</desc>
 <rect width="1200" height="630" fill="#0c0c0b"/><rect x="28.5" y="28.5" width="1143" height="573" fill="none" stroke="#494740"/>
-<path d="M76 91h41" stroke="#a99ae8" stroke-width="4"/><text x="76" y="249" fill="#efece4" font-family="Arial, sans-serif" font-weight="700" font-size="${font}" letter-spacing="-2">${esc(title)}</text>
-<text x="79" y="309" fill="#a8a49a" font-family="Arial, sans-serif" font-size="29">${esc(subtitle)}</text>
+<path d="M76 91h41" stroke="#a99ae8" stroke-width="4"/><text fill="#efece4" font-family="Arial, sans-serif" font-weight="700" font-size="${font}" letter-spacing="-2">${titleSpans}</text>
+<text x="79" y="${subtitleY}" fill="#a8a49a" font-family="Arial, sans-serif" font-size="29">${esc(subtitle)}</text>
 <g transform="translate(914 205)" fill="none" stroke="#a99ae8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">${shapes[motif]}</g>
 <path d="M76 513h1048" stroke="#494740"/><text x="78" y="554" fill="#efece4" font-family="Arial, sans-serif" font-size="20" font-weight="700">Steven Ammer</text><text x="1123" y="554" text-anchor="end" fill="#a8a49a" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1">${esc(category)}</text>
 </svg>\n`;

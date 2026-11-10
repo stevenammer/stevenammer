@@ -1,6 +1,6 @@
 # Featured covers
 
-Twelve original vector covers, each 1200 × 630 pixels. Every SVG is the editable source and its matching PNG is a browser-rendered copy. `contact-sheet.png` is a review sheet. No PDFs, product screenshots or stock images are included.
+Sixteen original vector covers, each 1200 × 630 pixels. Every SVG is the editable source and its matching PNG is a browser-rendered copy. `contact-sheet.png` is a review sheet. No PDFs, product screenshots or stock images are included.
 
 | Slug | Project or training document |
 | --- | --- |
