@@ -21,6 +21,8 @@ My weekly AI newsletter, and the workshop behind it: every issue, the prompts, t
 **[See it. Spec it. Send it.](https://github.com/stevenammer/see-spec-send)**
 A free, open-source way for any organization to fix the problems everyone already knows about with AI, and to do it the right way. Nothing counts until the people doing the work say it helps. Building in public.
 
+The matching [project and training-document covers](assets/featured/README.md) have editable vector sources and ready-to-use images.
+
 ## How I work
 
 - I don't write most of the code now. Agents do. My job is to say what done looks like, test it hard, and decide what's safe to ship.
